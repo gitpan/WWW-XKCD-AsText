@@ -32,7 +32,7 @@ is( $o->timeout, 10, '->timeout() method' );
 
 my $text = $o->retrieve( 1 );
 
-my $VAR1 = "[[A boy sits in a barrel which is floating in an ocean.]]\r\n\r\nBoy: I wonder where I'll float next?\r\n\r\n[[The barrel drifts into the distance. Nothing else can be seen.]]\r\n\r\n{{Alt: Don't we all.}}";
+my $VAR1 = "[[A boy sits in a barrel which is floating in an ocean.]]\n\nBoy: I wonder where I'll float next?\n\n[[The barrel drifts into the distance. Nothing else can be seen.]]\n\n{{Alt: Don't we all.}}";
 
 SKIP: {
     if ( not defined $text ) {

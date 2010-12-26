@@ -1,12 +1,21 @@
 ---
-name: WWW-XKCD-AsText
-version: 0.001
+abstract: 'retrieve text versions of comics on www.xkcd.com'
 author:
   - 'Zoffix Znet <zoffix@cpan.org>'
-abstract: retrieve text versions of comics on www.xkcd.com
+build_requires:
+  Test::More: 0
+configure_requires:
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3607'
 license: perl
-resources:
-  license: http://dev.perl.org/licenses/
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: WWW-XKCD-AsText
+provides:
+  WWW::XKCD::AsText:
+    file: lib/WWW/XKCD/AsText.pm
+    version: 0.002
 requires:
   Carp: 1.04
   Class::Data::Accessor: 0.04001
@@ -14,13 +23,6 @@ requires:
   HTML::TokeParser::Simple: 3.15
   LWP::UserAgent: 2.036
   URI: 1.35
-build_requires:
-  Test::More: 0
-provides:
-  WWW::XKCD::AsText:
-    file: lib/WWW/XKCD/AsText.pm
-    version: 0.001
-generated_by: Module::Build version 0.2808
-meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.2.html
-  version: 1.2
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.002

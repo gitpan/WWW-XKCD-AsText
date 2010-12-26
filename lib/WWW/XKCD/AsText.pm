@@ -3,7 +3,7 @@ package WWW::XKCD::AsText;
 use warnings;
 use strict;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 use Carp;
 use URI;
@@ -64,7 +64,9 @@ sub retrieve {
 
     my $response = $self->ua->get( $text_uri );
     if ( $response->is_success ) {
-        return $self->_parse( $response->content );
+        my $final_text = $self->_parse( $response->content );
+        $final_text =~ s/\s*\n\s*/\n\n/g;
+        return $final_text;
     }
     else {
         return $self->_set_error('Network error: ' . $response->status_line);

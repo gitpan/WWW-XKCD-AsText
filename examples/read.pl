@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+use lib qw(../lib lib);
+
 die "Usage: perl read.pl <comic_ID>\n"
     unless @ARGV;
 

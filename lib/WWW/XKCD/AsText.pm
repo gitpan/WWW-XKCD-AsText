@@ -3,7 +3,7 @@ package WWW::XKCD::AsText;
 use warnings;
 use strict;
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
 
 use Carp;
 use URI;
@@ -11,13 +11,13 @@ use LWP::UserAgent;
 use HTML::TokeParser::Simple;
 use HTML::Entities;
 use base 'Class::Data::Accessor';
-__PACKAGE__->mk_classaccessors qw(
+__PACKAGE__->mk_classaccessors( qw(
     ua
     timeout
     uri
     error
     text
-);
+));
 
 sub new {
     my $class = shift;
@@ -138,6 +138,7 @@ sub _set_error {
 1;
 __END__
 
+=encoding utf8
 
 =head1 NAME
 
